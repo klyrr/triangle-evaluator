@@ -1,26 +1,22 @@
 package com.klyrr.tradeshift;
 
-import java.util.Scanner;
 /**
- * Triangle challenge
-
- Write a program that will determine the type of a triangle. It should take the lengths of the triangle's three sides as input, and return whether the triangle is equilateral, isosceles or scalene.
-
- We are looking for solutions that showcase problem solving skills and structural considerations that can be applied to larger and potentially more complex problem domains. Pay special attention to tests, readability of code and error cases.
-
- The way you reflect upon your decisions is important to us, why we ask you to include a brief discussion of your design decisions and implementation choices.
-
- The resulting code and discussion is vital for us and will be used as a way for us to validate your engineering skills.
-
- Please put the solution up on GitHub and send the link to me. If you have some other code that you are proud of then please send that too.
-
- Please let me know if you have any questions.
- Thanks.
+ * As I am looking at triangles right now there might be the possibility that we might need such
+ * an evaluator for other geometrical figures as well.
+ *
+ * But regarding the YAGNI concept I ignore this until we really need this.
  */
 public class TriangleValidator {
 
-
-
-
+    /**
+     *
+     * @param sideA
+     * @param sideB
+     * @param sideC
+     * @return
+     */
+    public static TriangleType evaluateType(int sideA, int sideB, int sideC) {
+        return TriangleType.EQUILATERAL;
+    }
 
 }
