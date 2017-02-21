@@ -10,13 +10,19 @@ public class TriangleValidator {
 
     /**
      *
-     * @param sideA
-     * @param sideB
-     * @param sideC
-     * @return
+     * @param sideA side A of the triangle
+     * @param sideB side A of the triangle
+     * @param sideC side A of the triangle
+     *
+     * @return the actual type of the triangle
      */
     public static TriangleType evaluateType(int sideA, int sideB, int sideC) {
-        return TriangleType.EQUILATERAL;
+
+        if (sideA == sideB && sideB == sideC) {
+            return TriangleType.EQUILATERAL;
+        }
+
+        return TriangleType.SCALENE;
     }
 
 }
