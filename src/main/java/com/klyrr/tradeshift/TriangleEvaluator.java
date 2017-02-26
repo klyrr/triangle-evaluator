@@ -22,7 +22,7 @@ class TriangleEvaluator {
             return TriangleType.EQUILATERAL;
         }
 
-        if (sideA == sideB || sideB == sideC) {
+        if (sideA == sideB || sideB == sideC || sideA == sideC) {
             return TriangleType.ISOSCELES;
         }
 

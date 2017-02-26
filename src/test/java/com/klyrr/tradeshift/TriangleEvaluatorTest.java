@@ -20,8 +20,10 @@ public class TriangleEvaluatorTest {
     }
 
     @Test
-    public void itShouldFindAnIsoscelesTriangle() throws Exception {
+    public void itShouldFindIsoscelesTriangles() throws Exception {
         Assert.assertEquals(TriangleType.ISOSCELES, TriangleEvaluator.evaluateType(ANOTHER_TRIANGLE_SIDE, A_TRIANGLE_SIDE, A_TRIANGLE_SIDE));
+        Assert.assertEquals(TriangleType.ISOSCELES, TriangleEvaluator.evaluateType(A_TRIANGLE_SIDE, ANOTHER_TRIANGLE_SIDE, A_TRIANGLE_SIDE));
+        Assert.assertEquals(TriangleType.ISOSCELES, TriangleEvaluator.evaluateType(A_TRIANGLE_SIDE, A_TRIANGLE_SIDE, ANOTHER_TRIANGLE_SIDE));
     }
 
     @Test
