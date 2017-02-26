@@ -40,7 +40,7 @@ public class MainTest {
         assertEquals("", errorOutput.toString());
     }
 
-    @Test(timeout = 1000)
+    @Test
     public void itShouldShowAnErrorIfNotANumberWasEntered() {
         System.setIn(invalidInput);
         Main.main(null);
@@ -48,7 +48,7 @@ public class MainTest {
         assertTrue(errorOutput.toString().contains("was not a number but"));
     }
 
-    @Test(timeout = 1000)
+    @Test
     public void itShouldNotShowTheSuccessMessage() {
         System.setIn(invalidInput);
         Main.main(null);
@@ -56,7 +56,7 @@ public class MainTest {
         assertFalse(errorOutput.toString().contains("The given triangle is"));
     }
 
-    @Test(timeout = 1000)
+    @Test
     public void itShouldCalculateTheTriangleType() {
         System.setIn(validIsoscelesTriangleInput);
         Main.main(null);

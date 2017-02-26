@@ -6,7 +6,7 @@ package com.klyrr.tradeshift;
  *
  * But regarding the YAGNI concept I ignore this until we really need this.
  */
-public class TriangleValidator {
+class TriangleValidator {
 
     /**
      *
@@ -16,7 +16,7 @@ public class TriangleValidator {
      *
      * @return the actual type of the triangle
      */
-    public static TriangleType evaluateType(int sideA, int sideB, int sideC) {
+    static TriangleType evaluateType(int sideA, int sideB, int sideC) {
 
         if (sideA == sideB && sideB == sideC) {
             return TriangleType.EQUILATERAL;

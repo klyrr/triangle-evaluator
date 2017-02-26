@@ -9,31 +9,24 @@ public class Main {
         final Scanner in = new Scanner(System.in);
         System.out.println("Please enter the length of the three triangle sides:");
 
-        int sideA, sideB, sideC;
-        System.out.println("side A");
+        try {
+            final int sideA = getNextSide(in);
+            final int sideB = getNextSide(in);
+            final int sideC = getNextSide(in);
+
+            System.out.println(String.format("The given triangle is %s", TriangleValidator.evaluateType(sideA, sideB, sideC)));
+        } catch(final IllegalArgumentException e) {
+            System.err.println(String.format("Given side length was not a number but %s", in.next()));
+            System.err.println("Exiting.");
+        }
+    }
+
+    private static int getNextSide(final Scanner in) throws IllegalArgumentException {
+        System.out.println("Next side:");
         if (in.hasNextInt()) {
-            sideA = in.nextInt();
-        } else {
-            System.err.println(String.format("side A was not a number but %s", in.next()));
-            return;
+            return in.nextInt();
         }
 
-        System.out.println("side B");
-        if (in.hasNextInt()) {
-            sideB = in.nextInt();
-        } else {
-            System.err.println(String.format("side B was not a number but %s", in.next()));
-            return;
-        }
-
-        System.out.println("side C");
-        if (in.hasNextInt()) {
-            sideC = in.nextInt();
-        } else {
-            System.err.println(String.format("side C was not a number but %s", in.next()));
-            return;
-        }
-
-        System.out.println(String.format("The given triangle is %s", TriangleValidator.evaluateType(sideA, sideB, sideC)));
+        throw new IllegalArgumentException();
     }
 }
