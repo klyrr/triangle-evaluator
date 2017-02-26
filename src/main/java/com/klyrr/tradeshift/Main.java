@@ -9,15 +9,31 @@ public class Main {
         final Scanner in = new Scanner(System.in);
         System.out.println("Please enter the length of the three triangle sides:");
 
+        int sideA, sideB, sideC;
         System.out.println("side A");
-        final int sideA = in.nextInt();
+        if (in.hasNextInt()) {
+            sideA = in.nextInt();
+        } else {
+            System.err.println(String.format("side A was not a number but %s", in.next()));
+            return;
+        }
 
         System.out.println("side B");
-        final int sideB = in.nextInt();
+        if (in.hasNextInt()) {
+            sideB = in.nextInt();
+        } else {
+            System.err.println(String.format("side B was not a number but %s", in.next()));
+            return;
+        }
 
         System.out.println("side C");
-        final int sideC = in.nextInt();
+        if (in.hasNextInt()) {
+            sideC = in.nextInt();
+        } else {
+            System.err.println(String.format("side C was not a number but %s", in.next()));
+            return;
+        }
 
-        System.out.println(String.format("Your triangle is %s", TriangleType.SCALENE));
+        System.out.println(String.format("The given triangle is %s", TriangleType.SCALENE));
     }
 }
