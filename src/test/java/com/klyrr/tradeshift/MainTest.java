@@ -55,4 +55,13 @@ public class MainTest {
 
         assertFalse(errorOutput.toString().contains("The given triangle is"));
     }
+
+    @Test(timeout = 1000)
+    public void itShouldCalculateTheTriangleType() {
+        System.setIn(validIsoscelesTriangleInput);
+        Main.main(null);
+
+        assertTrue(outContent.toString().contains(TriangleType.ISOSCELES.toString()));
+        assertEquals("", errorOutput.toString());
+    }
 }

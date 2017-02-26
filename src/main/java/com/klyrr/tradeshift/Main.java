@@ -34,6 +34,6 @@ public class Main {
             return;
         }
 
-        System.out.println(String.format("The given triangle is %s", TriangleType.SCALENE));
+        System.out.println(String.format("The given triangle is %s", TriangleValidator.evaluateType(sideA, sideB, sideC)));
     }
 }
