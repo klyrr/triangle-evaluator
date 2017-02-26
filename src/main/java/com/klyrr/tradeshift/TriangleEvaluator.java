@@ -6,7 +6,7 @@ package com.klyrr.tradeshift;
  *
  * But regarding the YAGNI concept I ignore this until we really need this.
  */
-class TriangleValidator {
+class TriangleEvaluator {
 
     /**
      *

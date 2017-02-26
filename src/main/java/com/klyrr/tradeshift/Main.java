@@ -14,7 +14,7 @@ public class Main {
             final int sideB = getNextSide(in);
             final int sideC = getNextSide(in);
 
-            System.out.println(String.format("The given triangle is %s", TriangleValidator.evaluateType(sideA, sideB, sideC)));
+            System.out.println(String.format("The given triangle is %s", TriangleEvaluator.evaluateType(sideA, sideB, sideC)));
         } catch(final IllegalArgumentException e) {
             System.err.println(String.format("Given side length was not a number but %s", in.next()));
             System.err.println("Exiting.");
