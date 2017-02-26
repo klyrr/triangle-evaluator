@@ -9,6 +9,7 @@ package com.klyrr.tradeshift;
 class TriangleEvaluator {
 
     /**
+     * a function to evalute the type of the given triangle
      *
      * @param sideA side A of the triangle
      * @param sideB side A of the triangle

@@ -2,6 +2,9 @@ package com.klyrr.tradeshift;
 
 import java.util.Scanner;
 
+/**
+ * a main class to start the program.
+ */
 public class Main {
 
     public static void main(final String[] args) {
