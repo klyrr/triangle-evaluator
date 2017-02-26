@@ -22,6 +22,10 @@ public class TriangleValidator {
             return TriangleType.EQUILATERAL;
         }
 
+        if (sideA == sideB || sideB == sideC) {
+            return TriangleType.ISOSCELES;
+        }
+
         return TriangleType.SCALENE;
     }
 
