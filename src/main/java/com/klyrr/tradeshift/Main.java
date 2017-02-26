@@ -9,7 +9,6 @@ public class Main {
         final Scanner in = new Scanner(System.in);
         System.out.println("Please enter the length of the three triangle sides:");
 
-
         System.out.println("side A");
         final int sideA = in.nextInt();
 
